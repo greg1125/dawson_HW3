@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems 9 to 22</title>
+</head>
+<body>
+    <p> 
+        9. JavaScript is a dynamically typed language. What does that mean? <br>
+        <b>JavaScript is dynamically typed, meaning variables do not have a fixed data type and can hold <br>
+        different types of values at different times </b> <br>
+
+        <br>10. let is block-scoped and var is not. What does that mean? <br>
+       <b>let is only accessible inside the block {} where it is declared, <br>
+        whereas var is accessible anywhere within the function it was declared in, <br>
+        even outside {} blocks.</b> <br>
+
+        <br>11. What is the output of the following? <br>
+        console.log(4 + 5); <br>
+        console.log("4 + 5"); <br>
+        console.log("4" + "5"); <br>
+        console.log(2 + 3 * 5); <br>
+        console.log((2 + 3) * 5); <br>
+        console.log(10 % 3) <br>
+
+        <b>output: <br>
+            9 <br>
+            4 + 5 <br>
+            45 <br>
+            17 <br>
+            25 <br>
+            1 <br>
+        </b> <br>
+
+        <br>12. Variable Scope: What is the output of the following? <br>
+            let num1 = 0; <br>
+            {<br>
+            num1 = 1;<br>
+            const num2 = 0;<br>
+            } <br>
+            console.log(num1); <br>
+            console.log(num2) <br>
+
+            let num1 = 0; <br>
+
+            <b>output: <br>
+            let num1 = 0; <br>
+            { <br>
+                num1 = 1; <br>
+                const num2 = 0; <br>
+            }
+            console.log(num1); // 1 <br>
+            console.log(num2); // Error: num2 is not define <br>
+            </b>
+
+
+    </p>
+
+    <p>
+        13. Constants: What is the output of the following? <br>
+        const pi = 3.14; <br>
+        pi = 3.14159; <br>
+        console.log(pi); <br>
+
+        <b> 
+            output: <br>
+            const pi = 3.14; <br>
+            pi = 3.14159; // This line will throw an error because when you declare a variable using const, <br>
+            it means that the variable is constant and cannot be reassigned. <br>
+            console.log(pi);<br>
+
+        </b>
+    </p>
+
+
+    <p>
+        14. What is the output of the following? <br>
+            let a = 2; <br>
+            a -= 1; <br>
+            a++; <br>
+            let b = 8; <br>
+            b += 2; <br>
+            const c = a + b * b; <br>
+            const d = a * b + b; <br>
+            const e = a * (b + b); <br>
+            const f = a * b / a; <br>
+            const g = b / a * a; <br>
+            console.log(a, b, c, d, e, f, g); <br>
+        <b> 
+            output: <br>
+            <b>2 10 102 30 40 10 10</b> <br>
+
+        </b>
+    </p>
+
+    <p>
+        15. What is the output of the following? <br>
+            console.log(true && "Hello"); <br>
+            console.log(false && "Hello"); <br>
+            console.log(undefined && "Hello"); <br>
+            console.log("" && "Hello"); <br>
+            console.log("Hello" && "Goodbye") <br>
+            console.log(true || "Hello"); <br>
+            console.log(false || "Hello"); <br>
+            console.log(undefined || "Hello"); <br>
+            console.log("" || "Hello"); <br>
+            console.log("Hello" || "Goodbye") <br>
+
+
+        <b> 
+            output: <br>
+            Hello<br>
+            false<br>
+            undefined<br>
+            (empty string)<br>
+            Goodbye<br>
+            true<br>
+            Hello<br>
+            Hello<br>
+            Hello<br>
+            Hello<br>
+
+        </b>
+    <p>
+        16. What is the output of the following?
+            console.log("0" == 0); <br>
+            console.log("" == 0); <br>
+            console.log("" == 1); <br>
+            console.log(true == 0); <br>
+            console.log(true == 1); <br>
+            console.log("0" === 0); <br>
+            console.log("" === 0); <br>
+            console.log("" === 1);<br>
+            console.log(true === 0);<br>
+            console.log(true === 1) <br>
+        <b> 
+            output: <br>
+            true<br>
+            true<br>
+            false<br>
+            false<br>
+            true<br>
+            false<br>
+            false<br>
+            false<br>
+            false<br>
+            false<br>
+
+        </b>
+    
+    </p>
+
+    <p>
+        17. a. What is the output of the following? <br>
+            let i = 1; <br>
+            if ((1 > 2) && i++) { <br>
+            //Nothing. Want to test condition 
+            } <br>
+            console.log(`The value of i is: ${i}`); <br>
+
+            <b>
+                output: 
+                a. The value of i is: 1
+
+            </b>
+
+    </p>
+    
+
+    <p>    
+
+        17 b. What is the output of the following? <br>
+        let i = 1; <br>
+        if ((1 < 2) && i++) { <br>
+        //Nothing. Want to test condition 
+        } <br>
+        console.log(`The value of i is: ${i}`); <br>
+        
+        <b>
+            output:
+            b. The value of i is: 2
+        </b>
+    </p>
+
+    <p>
+        18. Break Test <br>
+        a. What is the output of the following?<br>
+        const x = "abc"; <br>
+        switch (x) { <br>
+        case "abc": <br>
+        console.log("x = abc"); <br>
+        break; <br>
+        case "def": <br>
+        console.log("x = def"); <br>
+        break; <br>
+        } <br>
+
+        <b> output: x = abc </b>
+
+        <br>
+        <br>b. What is the output of the following? <br>
+        const x = "abc"; <br>
+        switch (x) { <br>
+        case "abc": <br>
+        console.log("x = abc"); <br>
+        //no break 
+        case "def": <br>
+        console.log("x = def"); <br>
+        break; <br>
+        } <br>
+
+        <b>
+            output: <br>
+            x = abc <br>
+            x = def <br>
+        </b>
+
+    </p>
+
+    <p>
+
+        19. What is the output of the following? <br>
+            if (x > 2) { <br>
+            if (y > 2) { <br>
+            z = x + y; <br>
+            console.log("z is: ", z); <br>
+            } <br>
+            } else { <br>
+            console.log("x is: ", x); <br>
+            } <br>
+            a. When x = 2 and y = 3 <br>
+            b. When x = 3 and y = 2 <br>
+            c. When x = 3 and y = 3 <br>
+
+
+            <b>a. x is:  2</b> <br>
+            <b> b. z is:  5</b> <br>
+            <b>c. z is:  6</b> <br>
+
+    </p>
+
+    <p>
+
+        20. What is the output of the following, if any (indent this properly)? <br>
+            if (x > 2) { <br>
+            if (y > 2) { <br>
+            z = x + y; <br>
+            console.log("z is: ", z); <br>
+            } <br>
+            else { <br>
+            console.log("x is: ", x); <br>
+            } <br>
+            } <br>
+            a. When x = 2 and y = 3 <br>
+            b. When x = 3 and y = 2 <br>
+            c. When x = 3 and y = 3 <br>
+
+            <b>a. (no output) </b> <br>
+            <b>b. x is:  3 </b> <br>
+            <b>c. z is:  6 </b> <br>
+
+    </p>
+
+    <p>
+        21. How many times does this loop run and what is the output? <br>
+            <p>a. While loop <br>
+            let number = 1; <br>
+            while (number <= 5) 
+            { 
+            console.log(number);
+            number++; 
+            }  </p>
+                
+
+           <p> b. While loop 
+            let number = 1;
+            while (number <= 5) { 
+            console.log(number); 
+            } 
+            </p>
+
+        <b>
+            <br>Ouput <br>
+            <u>a.</u> <br>
+            1 <br>
+            2 <br>
+            3 <br>
+            4 <br>
+            5 <br> </b>
+
+            <br>
+            
+        <b>
+            <u>b.</u> <br>
+            1 <br>
+            1 <br>
+            1 <br>
+            1 <br>
+            1 <br>
+            ...<br>
+        </b>
+
+
+    </p>
+
+    <p>
+        22. How many times does this loop run and what is the output? <br>
+        <p>a. For loop <br>
+        for (let i = 1; i <= 5; i++) { 
+        console.log(i); 
+        }
+        </p>
+
+        <p> b. For loop
+        for (let i = 1; i <= 5; i++) { 
+        console.log(i);
+        i++;
+        }
+        </p>
+
+        <p>
+           <b>The output will be: <br>
+            1<br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            </b>
+        </p>
+
+        <p>
+           <b> Output: <br>
+            1<br>
+            3<br>
+            5<br>
+
+           </b>
+        </p>
+
+
+
+
+    </p>
+</body>
+</html>
